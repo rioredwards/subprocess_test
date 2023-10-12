@@ -1,7 +1,7 @@
 import dotenv from "dotenv";
 import pkg from "contentful";
 const { createClient } = pkg;
-// import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
+import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 
 dotenv.config();
 
@@ -14,3 +14,7 @@ export async function getProject(id: string) {
   const entry = await client.getEntry(id);
   return entry;
 }
+
+export const convertRichTextToHTML = (rawRichText: any) => {
+  return documentToHtmlString(rawRichText);
+};
