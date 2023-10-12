@@ -1,4 +1,5 @@
-import { convertRichTextToHTML, getProject } from "./contentful_markdown_renderer.js";
+import { convertRichTextToHTML, getProject } from "./contentfulMarkdownRenderer.js";
+import { writeToFile } from "./writeToFile.js";
 
 console.log("Hello From Typescript!");
 
@@ -8,6 +9,7 @@ async function main() {
   console.log("rawRichTextField: ", rawRichTextField);
   const html = convertRichTextToHTML(rawRichTextField);
   console.log(html);
+  writeToFile(html, "index.html");
 }
 
 main();
