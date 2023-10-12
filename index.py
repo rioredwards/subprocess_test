@@ -5,5 +5,5 @@ import subprocess
 # print(result.stdout)
 
 # Execute Node.js script and print out result
-result = subprocess.run(["node", "../javascript/dist/example.js"], capture_output=True)
+result = subprocess.run(["npm", "run", "start:javascript"], capture_output=True)
 print(result.stdout.decode("utf-8"))

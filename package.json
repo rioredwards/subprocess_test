@@ -2,9 +2,13 @@
   "name": "subprocess_test",
   "version": "1.0.0",
   "description": "",
-  "main": "example.js",
+  "main": "./dist/index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "build:w": "tsc -w",
+    "start:javascript": "node ./dist/index.js",
+    "start:python": "python3 ./index.py"
   },
   "repository": {
     "type": "git",
@@ -18,6 +22,12 @@
   },
   "homepage": "https://github.com/rioredwards/subprocess_test#readme",
   "devDependencies": {
-    "typescript": "^5.2.2"
+    "typescript": "^5.2.2",
+    "@types/node": "^20.8.4"
+  },
+  "dependencies": {
+    "@contentful/rich-text-html-renderer": "^16.2.0",
+    "contentful": "^10.6.2",
+    "dotenv": "^16.3.1"
   }
 }
