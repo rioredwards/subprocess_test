@@ -23,6 +23,7 @@ async function main() {
 
   // Log converted rich text to console (to be used in python script)
   console.log(result);
+  process.exit(0);
 }
 
 main();

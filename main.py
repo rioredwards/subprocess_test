@@ -20,9 +20,6 @@ markdown_sections = [
     usage_str,
 ]
 
-for section in markdown_sections:
-    print(section)
-
 finalStr = "".join(markdown_sections)
 print("Writing to README.md...")
 print(finalStr)

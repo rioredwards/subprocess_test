@@ -18,7 +18,7 @@ def run(rich_text):
         check=True,
     )
 
-    print(result.stdout)
+    # print(result.stdout)
     print(result.stderr)
 
     markdown = result.stdout.decode("utf-8")
